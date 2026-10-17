@@ -88,6 +88,8 @@ PLAYWRIGHT_CHROMIUM_EXECUTABLE="$(node -e 'console.log(require("playwright").chr
 
 ## Развёртывание на Vercel
 
+В `vercel.json` явно указаны Next.js, команда сборки и каталог `.next`. Если Vercel сообщает `STATIC_BUILD_NO_OUT_DIR` и ищет `public`, проверьте **Settings → Build and Deployment**: Framework Preset — **Next.js**, Root Directory — корень репозитория, а старый Override для Output Directory (`public`) отключите. Повторите развёртывание с последним коммитом `main`, чтобы применился `vercel.json`.
+
 Публичный деплой не выполнялся. Чтобы опубликовать сайт:
 
 1. Сохраните проект в своём GitHub-репозитории.
